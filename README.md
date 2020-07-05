@@ -1,6 +1,6 @@
-# JobinApp - Node.Js
+# CrepelitoApi
 
-Back-end project created for JobinApp
+Back-end project created for Crepelito Application
 
 # Requirements
 
@@ -12,13 +12,13 @@ Back-end project created for JobinApp
 To run the project, first clone the project using the command:
 
 ```
-git clone https://github.com/othoncampos/Ponto_Backend
+git clone https://github.com/bielslima/crepelito_api
 ```
 
 Then, download all the dependencies and store them in the project.
 
 ```
-cd Ponto_Backend
+cd crepelito_api
 npm install --save
 ```
 
