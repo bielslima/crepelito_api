@@ -21,4 +21,24 @@ router.get("/", async (req, res)=>{
     }
 });
 
+router.get("/:id", async (req, res)=>{
+    try {
+        const produto = await Produto.findById(req.params.id);
+        return res.send(produto);
+    } catch (error) {
+        return res.status(400).send({ error: "Falha ao encontrar lista de produtos" });
+    }
+});
+
+router.delete("/:id", async (req, res)=>{
+    try {
+        Produto.findByIdAndDelete(req.params.id, (err)=>{
+            if(err) return res.status(400).send({ error: "Falha ao deletar produto" });
+            return res.send({success:true});
+        });
+    } catch (error) {
+        return res.status(400).send({ error: "Falha ao encontrar lista de produtos" });
+    }
+});
+
 module.exports = app => app.use("/produtos",router);
