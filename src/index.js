@@ -12,6 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 require("./controllers/produtoController")(app);
 
-app.listen(port, () => {
+app.listen(process.env.port || port, () => {
   console.log("JobinServer rodando na porta: " + port);
 });
