@@ -2,7 +2,7 @@ const admin = require("firebase-admin"),
   express = require("express"),
   cors = require("cors"),
   app = express(),
-  port = process.env.port || 3333,
+  port = process.env.PORT || 3333,
   bodyParser = require("body-parser");
 
 app.use(cors());
