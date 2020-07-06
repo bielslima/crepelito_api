@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 require("./controllers/produtoController")(app);
+require("./controllers/clienteController")(app);
 
 app.listen(port, () => {
-  console.log("JobinServer rodando na porta: " + port);
+  console.log("CrepelitoServer rodando na porta: " + port);
 });
