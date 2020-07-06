@@ -14,7 +14,7 @@ router.post("/", async (req, res)=>{
 
 router.get("/", async (req, res)=>{
     try {
-        const clientes = await Cliente.find();
+        const clientes = await Cliente.find().sort({ nome: +1});
         return res.send(clientes);
     } catch (error) {
         return res.status(400).send({ error: "Falha ao encontrar lista de clientes" });
