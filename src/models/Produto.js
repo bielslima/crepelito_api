@@ -13,6 +13,10 @@ const ProdutoSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    isActive: {
+        type: Boolean,
+        default: true,
+    },
     createdAt: {
         type: Date,
         default: Date.now,
